@@ -1,5 +1,5 @@
 # IIR-Filters
-To design an IIR lowpass filter(Butterworth and Chebyshev filter) using Bilinear Transformation of the following specification
+To design an IIR  filter(Butterworth and Chebyshev filter) using Bilinear Transformation of the following specification
 
 Passband edge frequency:1000 Hz
 Stopband edge frequency:2500 Hz
