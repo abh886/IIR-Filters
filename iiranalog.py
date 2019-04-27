@@ -23,13 +23,14 @@ wpd=2*pi*fpa/fs
 wsd=2*pi*fsa/fs
 
 
-#N,wn=buttord(wpd,wsd,rp,rs,True)
+N,wn=buttord(wpd,wsd,rp,rs,True) #Calculate order of the given filter with given set of specifications
 
-N,wn=cheb1ord(wpd,wsd,rp,rs,True)
+#N,wn=cheb1ord(wpd,wsd,rp,rs,True)
 
-b,a=cheby1(N,rp,wn,'high',True)
 
-#b,a=butter(N,wn,'high',True)
+#b,a=cheby1(N,rp,wn,'high',True)
+
+b,a=butter(N,wn,'high',True)  #Compute the given transfer function 
 
 
 
@@ -37,7 +38,7 @@ sys=TransferFunction(b,a)
 
 w,h=freqs(b,a)
 
-plt.plot(w*fs/(2*pi),20*log10(abs(h)))
+plt.plot(w,20*log10(abs(h)))
 plt.grid()
 plt.title('Frequency response')
 plt.xlabel('Gain magnitude')
