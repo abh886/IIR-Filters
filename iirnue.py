@@ -17,7 +17,6 @@ x1=cos(2*pi*100*n/fs)
 x2=cos(2*pi*1500*n/fs)
 x3=cos(2*pi*4000*n/fs)
 
-X=x1+x2+x3
 wpd=2*pi*fpa/fs
 wsd=2*pi*fsa/fs
 
@@ -47,6 +46,7 @@ plt.ylabel('Amplitude')
 plt.show()
 
 y=lfilter(num,den,x1)
+
 
 plt.stem(y)
 plt.title('Output response')
